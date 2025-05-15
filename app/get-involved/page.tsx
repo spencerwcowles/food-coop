@@ -1,10 +1,17 @@
-import Link from "next/link"
-import { ArrowRight, Calendar, Clock, MapPin } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
+import Link from "next/link";
+import { ArrowRight, Calendar, Clock, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function GetInvolvedPage() {
   return (
@@ -14,7 +21,8 @@ export default function GetInvolvedPage() {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Get Involved</h1>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-            Join our community and be part of the movement for food justice at UCSD.
+            Join our community and be part of the movement for food justice at
+            UCSD.
           </p>
         </div>
       </section>
@@ -22,7 +30,9 @@ export default function GetInvolvedPage() {
       {/* Ways to Get Involved */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-12 text-center">Ways to Get Involved</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-12 text-center">
+            Ways to Get Involved
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -53,7 +63,10 @@ export default function GetInvolvedPage() {
                   <CardDescription>{way.description}</CardDescription>
                 </CardHeader>
                 <CardFooter className="mt-auto">
-                  <Button asChild className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90">
+                  <Button
+                    asChild
+                    className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90"
+                  >
                     <Link href={way.link}>
                       {way.cta}
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -69,7 +82,9 @@ export default function GetInvolvedPage() {
       {/* Upcoming Opportunities */}
       <section className="py-16 bg-[#F5F5F0]">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-8 text-center">Upcoming Opportunities</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-8 text-center">
+            Upcoming Opportunities
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
@@ -85,21 +100,24 @@ export default function GetInvolvedPage() {
                 date: "May 22, 2025",
                 time: "4:00 PM - 5:30 PM",
                 location: "Price Center, Room 3.1",
-                description: "Training for new volunteers who want to help with our weekly food distributions.",
+                description:
+                  "Training for new volunteers who want to help with our weekly food distributions.",
               },
               {
                 title: "Community Garden Workday",
                 date: "May 25, 2025",
                 time: "10:00 AM - 1:00 PM",
                 location: "Roger's Community Garden",
-                description: "Help maintain our community garden plots. Tools and refreshments provided!",
+                description:
+                  "Help maintain our community garden plots. Tools and refreshments provided!",
               },
               {
                 title: "Cooking Workshop Planning Meeting",
                 date: "May 27, 2025",
                 time: "5:00 PM - 6:30 PM",
                 location: "The Zone",
-                description: "Help plan our summer cooking workshop series. Share your ideas and skills!",
+                description:
+                  "Help plan our summer cooking workshop series. Share your ideas and skills!",
               },
             ].map((opportunity, index) => (
               <Card key={index} className="overflow-hidden">
@@ -120,11 +138,15 @@ export default function GetInvolvedPage() {
                       <MapPin className="h-5 w-5 mr-2 text-[#4A6741] shrink-0 mt-0.5" />
                       <span>{opportunity.location}</span>
                     </div>
-                    <p className="text-gray-600 mt-2">{opportunity.description}</p>
+                    <p className="text-gray-600 mt-2">
+                      {opportunity.description}
+                    </p>
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90">Sign Up</Button>
+                  <Button className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90">
+                    Sign Up
+                  </Button>
                 </CardFooter>
               </Card>
             ))}
@@ -147,10 +169,13 @@ export default function GetInvolvedPage() {
       {/* Working Groups */}
       <section id="working-groups" className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-8 text-center">Working Groups</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-8 text-center">
+            Working Groups
+          </h2>
           <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
-            Our co-op is organized into working groups that focus on different aspects of our mission. Join a group that
-            matches your interests and skills!
+            Our co-op is organized into working groups that focus on different
+            aspects of our mission. Join a group that matches your interests and
+            skills!
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
@@ -191,15 +216,19 @@ export default function GetInvolvedPage() {
                   <p className="text-gray-600 mb-4">{group.description}</p>
                   <div className="space-y-2">
                     <div>
-                      <span className="font-medium">Time Commitment:</span> {group.commitment}
+                      <span className="font-medium">Time Commitment:</span>{" "}
+                      {group.commitment}
                     </div>
                     <div>
-                      <span className="font-medium">Helpful Skills:</span> {group.skills}
+                      <span className="font-medium">Helpful Skills:</span>{" "}
+                      {group.skills}
                     </div>
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90">Join This Group</Button>
+                  <Button className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90">
+                    Join This Group
+                  </Button>
                 </CardFooter>
               </Card>
             ))}
@@ -211,10 +240,13 @@ export default function GetInvolvedPage() {
       <section id="volunteer-form" className="py-16 bg-[#F5F5F0]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4 text-center">Volunteer Sign-Up</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4 text-center">
+              Volunteer Sign-Up
+            </h2>
             <p className="text-center text-gray-600 mb-8">
-              Fill out this form to express your interest in volunteering with the UCSD Food Co-op. We'll reach out with
-              more information about upcoming opportunities.
+              Fill out this form to express your interest in volunteering with
+              the UCSD Food Co-op. We'll reach out with more information about
+              upcoming opportunities.
             </p>
             <Card>
               <CardContent className="pt-6">
@@ -222,27 +254,44 @@ export default function GetInvolvedPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="first-name">First Name</Label>
-                      <Input id="first-name" placeholder="Enter your first name" />
+                      <Input
+                        id="first-name"
+                        placeholder="Enter your first name"
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="last-name">Last Name</Label>
-                      <Input id="last-name" placeholder="Enter your last name" />
+                      <Input
+                        id="last-name"
+                        placeholder="Enter your last name"
+                      />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" type="email" placeholder="Enter your email address" />
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="Enter your email address"
+                    />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number (Optional)</Label>
-                    <Input id="phone" type="tel" placeholder="Enter your phone number" />
+                    <Input
+                      id="phone"
+                      type="tel"
+                      placeholder="Enter your phone number"
+                    />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="year">Year at UCSD</Label>
-                    <select id="year" className="w-full rounded-md border border-input bg-background px-3 py-2">
+                    <select
+                      id="year"
+                      className="w-full rounded-md border border-input bg-background px-3 py-2"
+                    >
                       <option value="">Select your year</option>
                       <option value="first">First Year</option>
                       <option value="second">Second Year</option>
@@ -268,13 +317,19 @@ export default function GetInvolvedPage() {
                         "Administrative Support",
                         "Other",
                       ].map((interest, index) => (
-                        <div key={index} className="flex items-center space-x-2">
+                        <div
+                          key={index}
+                          className="flex items-center space-x-2"
+                        >
                           <input
                             type="checkbox"
                             id={`interest-${index}`}
                             className="rounded border-gray-300 text-[#4A6741] focus:ring-[#4A6741]"
                           />
-                          <Label htmlFor={`interest-${index}`} className="font-normal">
+                          <Label
+                            htmlFor={`interest-${index}`}
+                            className="font-normal"
+                          >
                             {interest}
                           </Label>
                         </div>
@@ -293,13 +348,19 @@ export default function GetInvolvedPage() {
                         "Weekend Afternoons",
                         "Weekend Evenings",
                       ].map((time, index) => (
-                        <div key={index} className="flex items-center space-x-2">
+                        <div
+                          key={index}
+                          className="flex items-center space-x-2"
+                        >
                           <input
                             type="checkbox"
                             id={`time-${index}`}
                             className="rounded border-gray-300 text-[#4A6741] focus:ring-[#4A6741]"
                           />
-                          <Label htmlFor={`time-${index}`} className="font-normal">
+                          <Label
+                            htmlFor={`time-${index}`}
+                            className="font-normal"
+                          >
                             {time}
                           </Label>
                         </div>
@@ -308,7 +369,10 @@ export default function GetInvolvedPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Why are you interested in volunteering with the Food Co-op?</Label>
+                    <Label htmlFor="message">
+                      Why are you interested in volunteering with the Food
+                      Co-op?
+                    </Label>
                     <Textarea
                       id="message"
                       placeholder="Tell us a bit about yourself and why you're interested in joining the Food Co-op..."
@@ -316,7 +380,10 @@ export default function GetInvolvedPage() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90">
+                  <Button
+                    type="submit"
+                    className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90"
+                  >
                     Submit
                   </Button>
                 </form>
@@ -335,7 +402,8 @@ export default function GetInvolvedPage() {
           <div className="max-w-3xl mx-auto space-y-6">
             {[
               {
-                question: "Do I need to have experience with food justice or cooking to join?",
+                question:
+                  "Do I need to have experience with food justice or cooking to join?",
                 answer:
                   "Not at all! We welcome members of all experience levels. We value enthusiasm and a willingness to learn more than prior experience.",
               },
@@ -351,7 +419,8 @@ export default function GetInvolvedPage() {
               },
               {
                 question: "Do I need to pay dues to join?",
-                answer: "No, there are no membership dues. The Food Co-op is free to join and participate in.",
+                answer:
+                  "No, there are no membership dues. The Food Co-op is free to join and participate in.",
               },
               {
                 question: "How are decisions made in the co-op?",
@@ -360,8 +429,10 @@ export default function GetInvolvedPage() {
               },
             ].map((faq, index) => (
               <div key={index} className="border-b border-gray-200 pb-6">
-                <h3 className="text-xl font-semibold mb-2">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
+                <h3 className="text-xl font-semibold text-black mb-2">
+                  {faq.question}
+                </h3>
+                <p className="text-black">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -371,24 +442,35 @@ export default function GetInvolvedPage() {
       {/* CTA Section */}
       <section className="py-16 bg-[#4A6741] text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Ready to Make a Difference?</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-4">
+            Ready to Make a Difference?
+          </h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
-            Join us in building a more just and sustainable food system at UCSD. Everyone is welcome, and together we
-            can make a real impact.
+            Join us in building a more just and sustainable food system at UCSD.
+            Everyone is welcome, and together we can make a real impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-[#F9B872] text-black hover:bg-[#F9B872]/90">
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#F9B872] text-black hover:bg-[#F9B872]/90"
+            >
               <a href="#volunteer-form">
                 Sign Up Now
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white/10"
+            >
               <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }

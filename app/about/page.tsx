@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function AboutPage() {
   return (
@@ -8,9 +8,12 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-[#4A6741] text-white py-16">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">About Our Co-op</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
+            About Our Co-op
+          </h1>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-            Learn about our history, values, and the community we're building at UCSD.
+            Learn about our history, values, and the community we're building at
+            UCSD.
           </p>
         </div>
       </section>
@@ -20,29 +23,38 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-6">Our Story</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-6">
+                Our Story
+              </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  The UCSD Food Co-op was founded in 2015 by a group of students concerned about rising food insecurity
-                  on campus. What began as informal food sharing and community meals has grown into a recognized student
-                  organization with a dedicated space and regular programming.
+                  The UCSD Food Co-op was founded in 2015 by a group of students
+                  concerned about rising food insecurity on campus. What began
+                  as informal food sharing and community meals has grown into a
+                  recognized student organization with a dedicated space and
+                  regular programming.
                 </p>
                 <p>
-                  Our co-op operates on principles of mutual aid, collective decision-making, and accessibility. We
-                  believe that everyone deserves access to nutritious food regardless of their financial situation, and
-                  we work to create systems that address immediate needs while advocating for long-term solutions.
+                  Our co-op operates on principles of mutual aid, collective
+                  decision-making, and accessibility. We believe that everyone
+                  deserves access to nutritious food regardless of their
+                  financial situation, and we work to create systems that
+                  address immediate needs while advocating for long-term
+                  solutions.
                 </p>
                 <p>
-                  Today, the Food Co-op serves hundreds of UCSD students each quarter through our food distributions,
-                  community meals, workshops, and advocacy efforts. We're proud to be part of a growing movement of
-                  campus food security initiatives across the country.
+                  Today, the Food Co-op serves hundreds of UCSD students each
+                  quarter through our food distributions, community meals,
+                  workshops, and advocacy efforts. We're proud to be part of a
+                  growing movement of campus food security initiatives across
+                  the country.
                 </p>
               </div>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <img
-                src="/placeholder.svg?height=400&width=600"
-                alt="Students at an early Food Co-op meeting"
+                src="/thehub.jpg"
+                alt="The UCSD Food Co-op Hub space"
                 className="object-cover w-full h-full"
               />
             </div>
@@ -53,7 +65,9 @@ export default function AboutPage() {
       {/* Our Values */}
       <section className="py-16 bg-[#F5F5F0]">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-12 text-center">Our Values</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-12 text-center">
+            Our Values
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -88,7 +102,9 @@ export default function AboutPage() {
               },
             ].map((value, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold mb-3 text-[#4A6741]">{value.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-[#4A6741]">
+                  {value.title}
+                </h3>
                 <p className="text-gray-600">{value.description}</p>
               </div>
             ))}
@@ -99,10 +115,14 @@ export default function AboutPage() {
       {/* Our Team */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-12 text-center">Our Team</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-12 text-center">
+            Our Team
+          </h2>
           <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
-            The UCSD Food Co-op is run entirely by students. Our collective leadership model means that everyone has a
-            voice in decision-making and can take on responsibilities based on their interests and capacity.
+            The UCSD Food Co-op is run entirely by students. Our collective
+            leadership model means that everyone has a voice in decision-making
+            and can take on responsibilities based on their interests and
+            capacity.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -110,25 +130,25 @@ export default function AboutPage() {
                 name: "Alex Rivera",
                 role: "Outreach Coordinator",
                 bio: "Fourth-year Sociology major passionate about food justice and community organizing.",
-                image: "/placeholder.svg?height=300&width=300",
+                image: "/funimage.jpg",
               },
               {
                 name: "Priya Patel",
                 role: "Food Distribution Lead",
                 bio: "Third-year Public Health student with experience in mutual aid networks.",
-                image: "/placeholder.svg?height=300&width=300",
+                image: "/mainimage.jpg",
               },
               {
                 name: "Jordan Kim",
                 role: "Workshop Facilitator",
                 bio: "Second-year Environmental Studies major who loves teaching cooking skills.",
-                image: "/placeholder.svg?height=300&width=300",
+                image: "/thehub.jpg",
               },
               {
                 name: "Malik Johnson",
                 role: "Resource Coordinator",
                 bio: "Graduate student in Urban Planning focused on food security in urban areas.",
-                image: "/placeholder.svg?height=300&width=300",
+                image: "/funimage.jpg",
               },
             ].map((member, index) => (
               <div key={index} className="text-center">
@@ -147,7 +167,8 @@ export default function AboutPage() {
           </div>
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6">
-              Want to join our team? We welcome new members throughout the academic year!
+              Want to join our team? We welcome new members throughout the
+              academic year!
             </p>
             <Button asChild className="bg-[#4A6741] hover:bg-[#4A6741]/90">
               <Link href="/get-involved">
@@ -166,8 +187,9 @@ export default function AboutPage() {
             Our Partners & Supporters
           </h2>
           <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
-            We collaborate with campus departments, local organizations, and community groups to further our mission of
-            food justice and community building.
+            We collaborate with campus departments, local organizations, and
+            community groups to further our mission of food justice and
+            community building.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -180,8 +202,13 @@ export default function AboutPage() {
               "UCSD Housing & Dining",
               "San Diego Food System Alliance",
             ].map((partner, index) => (
-              <div key={index} className="bg-white h-32 rounded-lg flex items-center justify-center p-6 shadow-sm">
-                <span className="text-center font-medium text-gray-800">{partner}</span>
+              <div
+                key={index}
+                className="bg-white h-32 rounded-lg flex items-center justify-center p-6 shadow-sm"
+              >
+                <span className="text-center font-medium text-gray-800">
+                  {partner}
+                </span>
               </div>
             ))}
           </div>
@@ -191,24 +218,36 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 bg-[#4A6741] text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Join Our Community</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-4">
+            Join Our Community
+          </h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
-            We welcome students of all backgrounds, experiences, and skill levels. There are many ways to get involved
-            with the UCSD Food Co-op.
+            We welcome students of all backgrounds, experiences, and skill
+            levels. There are many ways to get involved with the UCSD Food
+            Co-op.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-[#F9B872] text-black hover:bg-[#F9B872]/90">
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#F9B872] text-black hover:bg-[#F9B872]/90"
+            >
               <Link href="/get-involved">
                 Get Involved
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white/10"
+            >
               <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }

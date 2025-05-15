@@ -1,47 +1,60 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className="bg-white border-b sticky top-0 z-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
-            <span className="text-xl font-bold text-[#4A6741]">UCSD Food Co-op</span>
+            <img
+              src="/logo.jpg"
+              alt="UCSD Food Co-op Logo"
+              className="h-8 w-auto mr-2"
+            />
+            <span className="text-xl font-bold text-[#4A6741]">
+              UCSD Food Co-op
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/" className="text-gray-700 hover:text-[#4A6741] font-medium">
-              Home
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-[#4A6741] font-medium">
+            <Link
+              href="/about"
+              className="text-gray-700 hover:text-[#4A6741] font-medium"
+            >
               About
             </Link>
-            <Link href="/resources" className="text-gray-700 hover:text-[#4A6741] font-medium">
+            <Link
+              href="/resources"
+              className="text-gray-700 hover:text-[#4A6741] font-medium"
+            >
               Resources
             </Link>
-            <Link href="/events" className="text-gray-700 hover:text-[#4A6741] font-medium">
+            <Link
+              href="/events"
+              className="text-gray-700 hover:text-[#4A6741] font-medium"
+            >
               Events
             </Link>
-            <Link href="/get-involved" className="text-gray-700 hover:text-[#4A6741] font-medium">
-              Get Involved
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-[#4A6741] font-medium">
+            <Link
+              href="/contact"
+              className="text-gray-700 hover:text-[#4A6741] font-medium"
+            >
               Contact
             </Link>
             <Button asChild className="bg-[#4A6741] hover:bg-[#4A6741]/90">
-              <Link href="/get-involved">Join Us</Link>
+              <Link href="/get-involved">Get Involved!</Link>
             </Button>
           </nav>
 
@@ -52,7 +65,11 @@ export default function Header() {
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
       </div>
@@ -103,12 +120,16 @@ export default function Header() {
             >
               Contact
             </Link>
-            <Button asChild className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90" onClick={() => setIsMenuOpen(false)}>
+            <Button
+              asChild
+              className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <Link href="/get-involved">Join Us</Link>
             </Button>
           </div>
         </div>
       )}
     </header>
-  )
+  );
 }
