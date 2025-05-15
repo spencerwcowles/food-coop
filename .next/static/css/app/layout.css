@@ -3049,6 +3049,35 @@ body {
   border-color: hsl(var(--destructive));
 }
 
+.dark\:border-\[\#6B8E62\]:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 142 98 / var(--tw-border-opacity, 1));
+}
+
+.dark\:bg-\[\#6B8E62\]:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 142 98 / var(--tw-bg-opacity, 1));
+}
+
+.dark\:text-\[\#6B8E62\]:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(107 142 98 / var(--tw-text-opacity, 1));
+}
+
+.dark\:hover\:bg-\[\#6B8E62\]:hover:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 142 98 / var(--tw-bg-opacity, 1));
+}
+
+.dark\:hover\:bg-\[\#6B8E62\]\/90:hover:is(.dark *) {
+  background-color: rgb(107 142 98 / 0.9);
+}
+
+.dark\:hover\:text-white:hover:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 @media (min-width: 640px) {
 
   .sm\:bottom-0 {

@@ -183,7 +183,10 @@ export default function Home() {
                   </span>
                 </li>
               </ul>
-              <Button asChild className="bg-[#4A6741] hover:bg-[#4A6741]/90">
+              <Button
+                asChild
+                className="bg-[#4A6741] hover:bg-[#4A6741]/90 text-white dark:bg-[#6B8E62] dark:hover:bg-[#6B8E62]/90"
+              >
                 <Link href="/get-involved">
                   Get Involved
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -245,7 +248,7 @@ export default function Home() {
                 <p className="text-gray-600 mb-4">{event.description}</p>
                 <Button
                   variant="outline"
-                  className="w-full border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white"
+                  className="w-full border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white dark:border-[#6B8E62] dark:text-[#6B8E62] dark:hover:bg-[#6B8E62] dark:hover:text-white"
                 >
                   Learn More
                 </Button>
@@ -256,7 +259,7 @@ export default function Home() {
             <Button
               asChild
               variant="outline"
-              className="border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white"
+              className="border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white dark:border-[#6B8E62] dark:text-[#6B8E62] dark:hover:bg-[#6B8E62] dark:hover:text-white"
             >
               <Link href="/events">
                 View All Events

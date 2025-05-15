@@ -65,7 +65,7 @@ export default function GetInvolvedPage() {
                 <CardFooter className="mt-auto">
                   <Button
                     asChild
-                    className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90"
+                    className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90 text-white dark:bg-[#6B8E62] dark:hover:bg-[#6B8E62]/90"
                   >
                     <Link href={way.link}>
                       {way.cta}
@@ -144,7 +144,7 @@ export default function GetInvolvedPage() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90">
+                  <Button className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90 text-white dark:bg-[#6B8E62] dark:hover:bg-[#6B8E62]/90">
                     Sign Up
                   </Button>
                 </CardFooter>
@@ -155,7 +155,7 @@ export default function GetInvolvedPage() {
             <Button
               asChild
               variant="outline"
-              className="border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white"
+              className="border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white dark:border-[#6B8E62] dark:text-[#6B8E62] dark:hover:bg-[#6B8E62] dark:hover:text-white"
             >
               <Link href="/events">
                 View All Events
@@ -226,7 +226,7 @@ export default function GetInvolvedPage() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90">
+                  <Button className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90 text-white dark:bg-[#6B8E62] dark:hover:bg-[#6B8E62]/90">
                     Join This Group
                   </Button>
                 </CardFooter>
@@ -382,7 +382,7 @@ export default function GetInvolvedPage() {
 
                   <Button
                     type="submit"
-                    className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90"
+                    className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90 text-white dark:bg-[#6B8E62] dark:hover:bg-[#6B8E62]/90"
                   >
                     Submit
                   </Button>
