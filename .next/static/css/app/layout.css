@@ -604,6 +604,23 @@ video {
     max-width: 1536px;
   }
 }
+.aspect-h-9 {
+  --tw-aspect-h: 9;
+}
+.aspect-w-16 {
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  --tw-aspect-w: 16;
+}
+.aspect-w-16 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -857,12 +874,6 @@ video {
 .hidden {
   display: none;
 }
-.aspect-square {
-  aspect-ratio: 1 / 1;
-}
-.aspect-video {
-  aspect-ratio: 16 / 9;
-}
 .size-4 {
   width: 1rem;
   height: 1rem;
@@ -944,12 +955,6 @@ video {
 }
 .h-svh {
   height: 100svh;
-}
-.h-\[200px\] {
-  height: 200px;
-}
-.h-\[150px\] {
-  height: 150px;
 }
 .max-h-96 {
   max-height: 24rem;
@@ -1077,6 +1082,9 @@ video {
 .max-w-3xl {
   max-width: 48rem;
 }
+.max-w-4xl {
+  max-width: 56rem;
+}
 .max-w-\[--skeleton-width\] {
   max-width: var(--skeleton-width);
 }
@@ -1091,9 +1099,6 @@ video {
 }
 .max-w-xs {
   max-width: 20rem;
-}
-.max-w-\[500px\] {
-  max-width: 500px;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1503,12 +1508,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-.bg-black\/30 {
-  background-color: rgb(0 0 0 / 0.3);
-}
-.bg-black\/20 {
-  background-color: rgb(0 0 0 / 0.2);
 }
 .bg-white\/80 {
   background-color: rgb(255 255 255 / 0.8);
@@ -3045,13 +3044,13 @@ body {
   color: hsl(var(--sidebar-accent-foreground));
 }
 
-.dark\:border-destructive:is(.dark *) {
-  border-color: hsl(var(--destructive));
-}
-
 .dark\:border-\[\#6B8E62\]:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(107 142 98 / var(--tw-border-opacity, 1));
+}
+
+.dark\:border-destructive:is(.dark *) {
+  border-color: hsl(var(--destructive));
 }
 
 .dark\:bg-\[\#6B8E62\]:is(.dark *) {
@@ -3183,14 +3182,6 @@ body {
 
   .md\:h-\[400px\] {
     height: 400px;
-  }
-
-  .md\:h-\[300px\] {
-    height: 300px;
-  }
-
-  .md\:h-\[200px\] {
-    height: 200px;
   }
 
   .md\:w-\[var\(--radix-navigation-menu-viewport-width\)\] {
