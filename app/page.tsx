@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight, Calendar, Heart, Users } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -212,8 +211,8 @@ export default function Home() {
             </div>
             <div className="order-1 md:order-2 flex justify-center items-center">
               <img
-                src="/funimage.jpg"
-                alt="Students participating in a Food Co-op workshop"
+                src="/memberseatingfood.jpg"
+                alt="Students enjoying food at the UCSD Food Co-op"
                 width={300}
                 height={300}
                 className="rounded-lg"
@@ -227,30 +226,30 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-8 text-center">
-            Upcoming Events
+            Get Involved
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                title: "Weekly Food Distribution",
-                date: "Every Wednesday, 12-2pm",
-                location: "Price Center Plaza",
+                title: "Start Volunteering",
+                date: "No Experience Needed",
+                location: "Food Co-op Kitchen",
                 description:
-                  "Free groceries for UCSD students. Bring your student ID and reusable bags.",
+                  "Begin by volunteering during meal preparation or cleanup shifts. We welcome all skill levels and provide training!",
               },
               {
-                title: "Cooking Workshop: Plant-Based Meals on a Budget",
-                date: "May 15, 5-7pm",
-                location: "The Zone",
+                title: "Weekly General Meetings",
+                date: "Every Thursday, 5-6pm",
+                location: "The Hub",
                 description:
-                  "Learn to cook affordable, nutritious plant-based meals with seasonal ingredients.",
+                  "Join our weekly meetings to learn about our operations, meet current members, and participate in collective decision-making.",
               },
               {
-                title: "General Meeting & New Member Orientation",
-                date: "May 20, 6-7:30pm",
-                location: "Student Services Center, Room 250",
+                title: "Volunteer Training Sessions",
+                date: "Every Monday, 2-3pm",
+                location: "Food Co-op Kitchen",
                 description:
-                  "Join us to learn about the co-op, meet current members, and find ways to get involved.",
+                  "New volunteer orientation and training. Learn about food safety, our kitchen procedures, and how to get involved in different roles.",
               },
             ].map((event, index) => (
               <div
@@ -264,10 +263,14 @@ export default function Home() {
                 <p className="text-gray-500 mb-3">{event.location}</p>
                 <p className="text-gray-600 mb-4">{event.description}</p>
                 <Button
+                  asChild
                   variant="outline"
                   className="w-full border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white"
                 >
-                  Learn More
+                  <Link href="/get-involved">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
             ))}
@@ -278,8 +281,8 @@ export default function Home() {
               variant="outline"
               className="border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white"
             >
-              <Link href="/events">
-                View All Events
+              <Link href="/get-involved">
+                View All Opportunities
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -356,7 +359,7 @@ export default function Home() {
               asChild
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-[#4A6741]"
+              className="border-white text-[#4A6741] hover:bg-white hover:text-[#4A6741]"
             >
               <Link href="/contact">Contact Us</Link>
             </Button>

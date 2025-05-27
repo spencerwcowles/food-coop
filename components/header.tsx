@@ -2,11 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -42,10 +46,15 @@ export default function Header() {
               Resources
             </Link>
             <Link
-              href="/events"
-              className="text-gray-700 hover:text-[#4A6741] font-medium"
+              href="/offerings"
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-primary",
+                pathname === "/offerings"
+                  ? "text-black dark:text-white"
+                  : "text-muted-foreground"
+              )}
             >
-              Events
+              Offerings
             </Link>
             <Link
               href="/contact"
@@ -100,11 +109,14 @@ export default function Header() {
               Resources
             </Link>
             <Link
-              href="/events"
-              className="block py-2 text-gray-700 hover:text-[#4A6741] font-medium"
+              href="/offerings"
+              className={cn(
+                buttonVariants({ variant: "ghost" }),
+                "w-full justify-start"
+              )}
               onClick={() => setIsMenuOpen(false)}
             >
-              Events
+              Offerings
             </Link>
             <Link
               href="/get-involved"

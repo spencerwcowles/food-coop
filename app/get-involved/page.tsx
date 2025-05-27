@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Calendar, Clock, MapPin } from "lucide-react";
+import { ArrowRight, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,9 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 
 export default function GetInvolvedPage() {
   return (
@@ -21,54 +18,55 @@ export default function GetInvolvedPage() {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Get Involved</h1>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-            Join our community and be part of the movement for food justice at
+            Join our student-run, nonprofit collective dedicated to providing
+            affordable, vegan meals and bulk goods while building community at
             UCSD.
           </p>
         </div>
       </section>
 
-      {/* Ways to Get Involved */}
+      {/* Membership Process */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-12 text-center">
-            Ways to Get Involved
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-8 text-center">
+            How to Join
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Attend Events",
+                title: "1. Start Volunteering",
                 description:
-                  "Join our weekly meetings, workshops, and community meals to learn more about the co-op and meet current members.",
-                cta: "View Calendar",
-                link: "/events",
+                  "Begin by volunteering during meal preparation or cleanup shifts. No prior experience needed - we welcome all skill levels!",
+                cta: "Connect With Us",
+                link: "#connect",
               },
               {
-                title: "Volunteer",
+                title: "2. Attend Meetings",
                 description:
-                  "Help with food distributions, cooking workshops, gardening days, and other activities based on your interests and availability.",
-                cta: "Sign Up",
-                link: "#volunteer-form",
+                  "Participate in our weekly meetings to learn more about our operations and community. Meeting times are set each quarter based on members' availability.",
+                cta: "Learn More",
+                link: "#meetings",
               },
               {
-                title: "Join a Working Group",
+                title: "3. Become a Member",
                 description:
-                  "Become part of a team focused on specific aspects of our work, such as outreach, food distribution, or education.",
-                cta: "Explore Groups",
-                link: "#working-groups",
+                  "After volunteering for a quarter and attending weekly meetings, you can apply for free membership to become more involved in our collective.",
+                cta: "Membership Info",
+                link: "#membership",
               },
-            ].map((way, index) => (
+            ].map((step, index) => (
               <Card key={index} className="h-full flex flex-col">
                 <CardHeader>
-                  <CardTitle>{way.title}</CardTitle>
-                  <CardDescription>{way.description}</CardDescription>
+                  <CardTitle>{step.title}</CardTitle>
+                  <CardDescription>{step.description}</CardDescription>
                 </CardHeader>
                 <CardFooter className="mt-auto">
                   <Button
                     asChild
-                    className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90 text-white dark:bg-[#6B8E62] dark:hover:bg-[#6B8E62]/90"
+                    className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90 text-white"
                   >
-                    <Link href={way.link}>
-                      {way.cta}
+                    <Link href={step.link}>
+                      {step.cta}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -79,316 +77,42 @@ export default function GetInvolvedPage() {
         </div>
       </section>
 
-      {/* Upcoming Opportunities */}
+      {/* What We Do */}
       <section className="py-16 bg-[#F5F5F0]">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-8 text-center">
-            Upcoming Opportunities
+            What We Do
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                title: "New Member Orientation",
-                date: "May 20, 2025",
-                time: "6:00 PM - 7:30 PM",
-                location: "Student Services Center, Room 250",
-                description:
-                  "Learn about the co-op, our values, and how you can get involved. No prior experience necessary!",
-              },
-              {
-                title: "Food Distribution Volunteer Training",
-                date: "May 22, 2025",
-                time: "4:00 PM - 5:30 PM",
-                location: "Price Center, Room 3.1",
-                description:
-                  "Training for new volunteers who want to help with our weekly food distributions.",
-              },
-              {
-                title: "Community Garden Workday",
-                date: "May 25, 2025",
-                time: "10:00 AM - 1:00 PM",
-                location: "Roger's Community Garden",
-                description:
-                  "Help maintain our community garden plots. Tools and refreshments provided!",
-              },
-              {
-                title: "Cooking Workshop Planning Meeting",
-                date: "May 27, 2025",
-                time: "5:00 PM - 6:30 PM",
-                location: "The Zone",
-                description:
-                  "Help plan our summer cooking workshop series. Share your ideas and skills!",
-              },
-            ].map((opportunity, index) => (
-              <Card key={index} className="overflow-hidden">
-                <CardHeader className="bg-[#4A6741]/10 pb-3">
-                  <CardTitle>{opportunity.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <div className="space-y-3">
-                    <div className="flex items-start">
-                      <Calendar className="h-5 w-5 mr-2 text-[#4A6741] shrink-0 mt-0.5" />
-                      <span>{opportunity.date}</span>
-                    </div>
-                    <div className="flex items-start">
-                      <Clock className="h-5 w-5 mr-2 text-[#4A6741] shrink-0 mt-0.5" />
-                      <span>{opportunity.time}</span>
-                    </div>
-                    <div className="flex items-start">
-                      <MapPin className="h-5 w-5 mr-2 text-[#4A6741] shrink-0 mt-0.5" />
-                      <span>{opportunity.location}</span>
-                    </div>
-                    <p className="text-gray-600 mt-2">
-                      {opportunity.description}
-                    </p>
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90 text-white dark:bg-[#6B8E62] dark:hover:bg-[#6B8E62]/90">
-                    Sign Up
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Button
-              asChild
-              variant="outline"
-              className="border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white dark:border-[#6B8E62] dark:text-[#6B8E62] dark:hover:bg-[#6B8E62] dark:hover:text-white"
-            >
-              <Link href="/events">
-                View All Events
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Working Groups */}
-      <section id="working-groups" className="py-16 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-8 text-center">
-            Working Groups
-          </h2>
-          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
-            Our co-op is organized into working groups that focus on different
-            aspects of our mission. Join a group that matches your interests and
-            skills!
-          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: "Food Distribution",
+                title: "Meal Preparation",
                 description:
-                  "Coordinates weekly food distributions, manages inventory, and ensures food safety protocols are followed.",
-                commitment: "3-5 hours/week",
-                skills: "Organization, reliability, food handling",
+                  "Help prepare affordable, nutritious vegan meals for the UCSD community. Learn cooking skills and contribute to food security on campus.",
               },
               {
-                title: "Education & Workshops",
+                title: "Bulk Goods Distribution",
                 description:
-                  "Plans and facilitates workshops on cooking, nutrition, food justice, and other related topics.",
-                commitment: "2-4 hours/week",
-                skills: "Teaching, curriculum development, public speaking",
+                  "Assist in providing accessible, affordable bulk food items to students and community members.",
               },
               {
-                title: "Outreach & Communications",
+                title: "Community Building",
                 description:
-                  "Manages social media, creates promotional materials, and coordinates tabling events to raise awareness.",
-                commitment: "2-4 hours/week",
-                skills: "Writing, design, social media management",
+                  "Participate in creating a supportive space for students to connect, share skills, and work towards food justice.",
               },
               {
-                title: "Garden Collective",
+                title: "Sustainable Practices",
                 description:
-                  "Maintains our community garden plots, organizes workdays, and coordinates with campus garden initiatives.",
-                commitment: "2-5 hours/week",
-                skills: "Gardening, sustainability knowledge, physical labor",
+                  "Engage in environmentally conscious food practices and learn about sustainable food systems.",
               },
-            ].map((group, index) => (
+            ].map((activity, index) => (
               <Card key={index}>
                 <CardHeader>
-                  <CardTitle>{group.title}</CardTitle>
+                  <CardTitle>{activity.title}</CardTitle>
+                  <CardDescription>{activity.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">{group.description}</p>
-                  <div className="space-y-2">
-                    <div>
-                      <span className="font-medium">Time Commitment:</span>{" "}
-                      {group.commitment}
-                    </div>
-                    <div>
-                      <span className="font-medium">Helpful Skills:</span>{" "}
-                      {group.skills}
-                    </div>
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90 text-white dark:bg-[#6B8E62] dark:hover:bg-[#6B8E62]/90">
-                    Join This Group
-                  </Button>
-                </CardFooter>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Volunteer Form */}
-      <section id="volunteer-form" className="py-16 bg-[#F5F5F0]">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4 text-center">
-              Volunteer Sign-Up
-            </h2>
-            <p className="text-center text-gray-600 mb-8">
-              Fill out this form to express your interest in volunteering with
-              the UCSD Food Co-op. We'll reach out with more information about
-              upcoming opportunities.
-            </p>
-            <Card>
-              <CardContent className="pt-6">
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="first-name">First Name</Label>
-                      <Input
-                        id="first-name"
-                        placeholder="Enter your first name"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="last-name">Last Name</Label>
-                      <Input
-                        id="last-name"
-                        placeholder="Enter your last name"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="Enter your email address"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number (Optional)</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="year">Year at UCSD</Label>
-                    <select
-                      id="year"
-                      className="w-full rounded-md border border-input bg-background px-3 py-2"
-                    >
-                      <option value="">Select your year</option>
-                      <option value="first">First Year</option>
-                      <option value="second">Second Year</option>
-                      <option value="third">Third Year</option>
-                      <option value="fourth">Fourth Year</option>
-                      <option value="fifth">Fifth Year+</option>
-                      <option value="graduate">Graduate Student</option>
-                      <option value="staff">Faculty/Staff</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label>Areas of Interest (Select all that apply)</Label>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {[
-                        "Food Distribution",
-                        "Cooking Workshops",
-                        "Gardening",
-                        "Outreach & Communications",
-                        "Event Planning",
-                        "Food Justice Advocacy",
-                        "Administrative Support",
-                        "Other",
-                      ].map((interest, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center space-x-2"
-                        >
-                          <input
-                            type="checkbox"
-                            id={`interest-${index}`}
-                            className="rounded border-gray-300 text-[#4A6741] focus:ring-[#4A6741]"
-                          />
-                          <Label
-                            htmlFor={`interest-${index}`}
-                            className="font-normal"
-                          >
-                            {interest}
-                          </Label>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="availability">Availability</Label>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {[
-                        "Weekday Mornings",
-                        "Weekday Afternoons",
-                        "Weekday Evenings",
-                        "Weekend Mornings",
-                        "Weekend Afternoons",
-                        "Weekend Evenings",
-                      ].map((time, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center space-x-2"
-                        >
-                          <input
-                            type="checkbox"
-                            id={`time-${index}`}
-                            className="rounded border-gray-300 text-[#4A6741] focus:ring-[#4A6741]"
-                          />
-                          <Label
-                            htmlFor={`time-${index}`}
-                            className="font-normal"
-                          >
-                            {time}
-                          </Label>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">
-                      Why are you interested in volunteering with the Food
-                      Co-op?
-                    </Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Tell us a bit about yourself and why you're interested in joining the Food Co-op..."
-                      rows={4}
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90 text-white dark:bg-[#6B8E62] dark:hover:bg-[#6B8E62]/90"
-                  >
-                    Submit
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -455,18 +179,10 @@ export default function GetInvolvedPage() {
               size="lg"
               className="bg-[#F9B872] text-black hover:bg-[#F9B872]/90"
             >
-              <a href="#volunteer-form">
-                Sign Up Now
+              <Link href="#connect">
+                Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white/10"
-            >
-              <Link href="/contact">Contact Us</Link>
+              </Link>
             </Button>
           </div>
         </div>
