@@ -47,12 +47,7 @@ export default function Header() {
             </Link>
             <Link
               href="/offerings"
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                pathname === "/offerings"
-                  ? "text-black dark:text-white"
-                  : "text-muted-foreground"
-              )}
+              className="text-gray-700 hover:text-[#4A6741] font-medium"
             >
               Offerings
             </Link>
@@ -110,10 +105,7 @@ export default function Header() {
             </Link>
             <Link
               href="/offerings"
-              className={cn(
-                buttonVariants({ variant: "ghost" }),
-                "w-full justify-start"
-              )}
+              className="block py-2 text-gray-700 hover:text-[#4A6741] font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Offerings

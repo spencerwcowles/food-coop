@@ -254,7 +254,7 @@ export default function Home() {
             ].map((event, index) => (
               <div
                 key={index}
-                className="border rounded-lg p-6 hover:shadow-md transition-shadow"
+                className="bg-white border rounded-lg p-6 hover:shadow-md transition-shadow"
               >
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {event.title}
@@ -265,7 +265,7 @@ export default function Home() {
                 <Button
                   asChild
                   variant="outline"
-                  className="w-full border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white"
+                  className="w-full bg-white border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white"
                 >
                   <Link href="/get-involved">
                     Learn More
@@ -279,7 +279,7 @@ export default function Home() {
             <Button
               asChild
               variant="outline"
-              className="border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white"
+              className="bg-white border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white"
             >
               <Link href="/get-involved">
                 View All Opportunities
