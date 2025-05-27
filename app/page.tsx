@@ -22,7 +22,7 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-[#F9B872] text-black hover:bg-[#F9B872]/90"
+                  className="bg-[#F9B872] text-black hover:bg-[#F9B872]/90 hover:text-black"
                 >
                   <Link href="/get-involved">
                     Get Involved
@@ -33,7 +33,7 @@ export default function Home() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white/10"
+                  className="bg-transparent border-white text-white hover:bg-white hover:text-[#4A6741]"
                 >
                   <Link href="/about">Learn More</Link>
                 </Button>
@@ -265,7 +265,7 @@ export default function Home() {
                 <p className="text-gray-600 mb-4">{event.description}</p>
                 <Button
                   variant="outline"
-                  className="w-full border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white dark:border-[#6B8E62] dark:text-[#6B8E62] dark:hover:bg-[#6B8E62] dark:hover:text-white"
+                  className="w-full border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white"
                 >
                   Learn More
                 </Button>
@@ -276,7 +276,7 @@ export default function Home() {
             <Button
               asChild
               variant="outline"
-              className="border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white dark:border-[#6B8E62] dark:text-[#6B8E62] dark:hover:bg-[#6B8E62] dark:hover:text-white"
+              className="border-[#4A6741] text-[#4A6741] hover:bg-[#4A6741] hover:text-white"
             >
               <Link href="/events">
                 View All Events
@@ -345,7 +345,7 @@ export default function Home() {
             <Button
               asChild
               size="lg"
-              className="bg-[#F9B872] text-black hover:bg-[#F9B872]/90"
+              className="bg-[#F9B872] text-black hover:bg-[#F9B872]/90 hover:text-black"
             >
               <Link href="/get-involved">
                 Get Involved
@@ -356,7 +356,7 @@ export default function Home() {
               asChild
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white/10"
+              className="border-white text-white hover:bg-white hover:text-[#4A6741]"
             >
               <Link href="/contact">Contact Us</Link>
             </Button>

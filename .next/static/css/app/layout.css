@@ -2173,6 +2173,11 @@ body {
   background-color: rgb(255 255 255 / 0.1);
 }
 
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:text-\[\#4A6741\]:hover {
   --tw-text-opacity: 1;
   color: rgb(74 103 65 / var(--tw-text-opacity, 1));
@@ -2206,6 +2211,11 @@ body {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 .hover\:underline:hover {
