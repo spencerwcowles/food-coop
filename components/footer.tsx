@@ -146,11 +146,11 @@ export default function Footer() {
               <li className="text-white/80 mt-4">
                 <strong className="text-white">Hours:</strong>
                 <br />
-                Mon-Thu: 10:00 AM - 4:00 PM
+                Mon-Fri: 11:00 AM - 3:00 PM
                 <br />
-                Fri: 10:00 AM - 2:00 PM
+                Sat: Closed
                 <br />
-                Sat-Sun: Closed
+                Sun: Closed
               </li>
             </ul>
           </div>
