@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#333333] text-white">
       <div className="container mx-auto px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">UCSD Food Co-op</h3>
             <p className="text-white/80 max-w-xs">
@@ -107,52 +107,6 @@ export default function Footer() {
                   className="text-white/80 hover:text-white"
                 >
                   Get Involved
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/resources/food-pantry"
-                  className="text-white/80 hover:text-white"
-                >
-                  UCSD Triton Food Pantry
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources/calfresh"
-                  className="text-white/80 hover:text-white"
-                >
-                  CalFresh Assistance
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources/community-gardens"
-                  className="text-white/80 hover:text-white"
-                >
-                  Campus Community Gardens
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources/cooking-guides"
-                  className="text-white/80 hover:text-white"
-                >
-                  Cooking Guides
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources/food-justice"
-                  className="text-white/80 hover:text-white"
-                >
-                  Food Justice Resources
                 </Link>
               </li>
             </ul>
