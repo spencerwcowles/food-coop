@@ -6,7 +6,6 @@ import {
   Instagram,
   Mail,
   MapPin,
-  Phone,
   Twitter,
   ArrowRight,
   ExternalLink,
@@ -128,19 +127,10 @@ export default function Footer() {
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-[#F9B872] shrink-0" />
                 <a
-                  href="mailto:foodcoop@ucsd.edu"
+                  href="mailto:core@foodcoopatucsd.org"
                   className="text-white/80 hover:text-white"
                 >
-                  foodcoop@ucsd.edu
-                </a>
-              </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 mr-2 text-[#F9B872] shrink-0" />
-                <a
-                  href="tel:+18585551234"
-                  className="text-white/80 hover:text-white"
-                >
-                  (858) 555-1234
+                  core@foodcoopatucsd.org
                 </a>
               </li>
               <li className="text-white/80 mt-4">
