@@ -113,52 +113,6 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/resources/food-pantry"
-                  className="text-white/80 hover:text-white"
-                >
-                  UCSD Triton Food Pantry
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources/calfresh"
-                  className="text-white/80 hover:text-white"
-                >
-                  CalFresh Assistance
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources/community-gardens"
-                  className="text-white/80 hover:text-white"
-                >
-                  Campus Community Gardens
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources/cooking-guides"
-                  className="text-white/80 hover:text-white"
-                >
-                  Cooking Guides
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources/food-justice"
-                  className="text-white/80 hover:text-white"
-                >
-                  Food Justice Resources
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
@@ -192,9 +146,7 @@ export default function Footer() {
               <li className="text-white/80 mt-4">
                 <strong className="text-white">Hours:</strong>
                 <br />
-                Mon-Thu: 10:00 AM - 4:00 PM
-                <br />
-                Fri: 10:00 AM - 2:00 PM
+                Mon-Fri: 11:00 AM - 3:00 PM
                 <br />
                 Sat-Sun: Closed
               </li>
