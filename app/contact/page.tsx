@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -52,25 +52,10 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-gray-900">Email</h3>
                     <p className="text-gray-600 mt-1">
                       <a
-                        href="mailto:foodcoop@ucsd.edu"
+                        href="mailto:core@foodcoopatucsd.org"
                         className="hover:text-[#4A6741]"
                       >
-                        foodcoop@ucsd.edu
-                      </a>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start justify-center text-left">
-                  <Phone className="h-6 w-6 mr-3 text-[#4A6741] shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600 mt-1">
-                      <a
-                        href="tel:+18585551234"
-                        className="hover:text-[#4A6741]"
-                      >
-                        (858) 555-1234
+                        core@foodcoopatucsd.org
                       </a>
                     </p>
                   </div>
@@ -192,7 +177,7 @@ export default function ContactPage() {
               {
                 question: "What are your office hours?",
                 answer:
-                  "Our office is open Monday through Thursday from 10:00 AM to 4:00 PM, and Friday from 10:00 AM to 2:00 PM. We are closed on weekends.",
+                  "Our office is open Monday through Friday from 11:00 AM to 3:00 PM. We are closed on weekends.",
               },
               {
                 question: "How quickly do you respond to emails?",
