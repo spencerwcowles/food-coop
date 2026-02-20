@@ -21,75 +21,8 @@ export default function ContactPage() {
       {/* Contact Form & Info */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-6">
-                Get in Touch
-              </h2>
-              <p className="text-gray-600 mb-8">
-                Whether you have questions about our events, want to volunteer,
-                or need assistance with food resources, we're here to help. Fill
-                out the form and we'll get back to you as soon as possible.
-              </p>
-
-              <Card>
-                <CardContent className="pt-6">
-                  <form className="space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="first-name">First Name</Label>
-                        <Input
-                          id="first-name"
-                          placeholder="Enter your first name"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="last-name">Last Name</Label>
-                        <Input
-                          id="last-name"
-                          placeholder="Enter your last name"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email Address</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="Enter your email address"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">Subject</Label>
-                      <Input
-                        id="subject"
-                        placeholder="What is your message about?"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea
-                        id="message"
-                        placeholder="Type your message here..."
-                        rows={5}
-                      />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      className="w-full bg-[#4A6741] hover:bg-[#4A6741]/90"
-                    >
-                      Send Message
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div>
+          <div className="flex justify-center">
+            <div className="w-full max-w-2xl text-center">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-6">
                 Contact Information
               </h2>
@@ -99,7 +32,7 @@ export default function ContactPage() {
               </p>
 
               <div className="space-y-6 mb-8">
-                <div className="flex items-start">
+                <div className="flex items-start justify-center text-left">
                   <MapPin className="h-6 w-6 mr-3 text-[#4A6741] shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Location</h3>
@@ -113,7 +46,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                <div className="flex items-start justify-center text-left">
                   <Mail className="h-6 w-6 mr-3 text-[#4A6741] shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
@@ -128,7 +61,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                <div className="flex items-start justify-center text-left">
                   <Phone className="h-6 w-6 mr-3 text-[#4A6741] shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone</h3>
