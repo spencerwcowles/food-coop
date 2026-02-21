@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Instagram } from "lucide-react";
+import { ArrowRight} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -38,21 +38,21 @@ export default function GetInvolvedPage() {
                 description:
                   "Begin by volunteering during meal preparation or cleanup shifts. No prior experience needed - we welcome all skill levels!",
                 cta: "Connect With Us",
-                link: "#connect",
+                link: "/contact",
               },
               {
                 title: "2. Attend Meetings",
                 description:
                   "Participate in our weekly meetings to learn more about our operations and community. Meeting times are set each quarter based on members' availability.",
                 cta: "Learn More",
-                link: "#meetings",
+                link: "/contact",
               },
               {
                 title: "3. Become a Member",
                 description:
                   "After volunteering for a quarter and attending weekly meetings, you can apply for free membership to become more involved in our collective.",
                 cta: "Membership Info",
-                link: "#membership",
+                link: "/contact",
               },
             ].map((step, index) => (
               <Card key={index} className="h-full flex flex-col">
@@ -179,7 +179,7 @@ export default function GetInvolvedPage() {
               size="lg"
               className="bg-[#F9B872] text-black hover:bg-[#F9B872]/90"
             >
-              <Link href="#connect">
+              <Link href="/contact">
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
