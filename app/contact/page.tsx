@@ -69,12 +69,8 @@ export default function ContactPage() {
                 <div className="bg-[#F5F5F0] p-4 rounded-lg">
                   <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <p className="font-medium">Monday - Thursday</p>
-                      <p className="text-gray-600">10:00 AM - 4:00 PM</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Friday</p>
-                      <p className="text-gray-600">10:00 AM - 2:00 PM</p>
+                      <p className="font-medium">Monday - Friady</p>
+                      <p className="text-gray-600">11:00 AM - 3:00 PM</p>
                     </div>
                     <div>
                       <p className="font-medium">Saturday</p>
