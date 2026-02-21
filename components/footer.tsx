@@ -2,11 +2,9 @@
 
 import Link from "next/link";
 import {
-  Facebook,
   Instagram,
   Mail,
   MapPin,
-  Twitter,
   ArrowRight,
   ExternalLink,
 } from "lucide-react";
@@ -32,24 +30,6 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="https://facebook.com"
-                className="text-white hover:text-[#F9B872]"
-                aria-label="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="https://twitter.com"
-                className="text-white hover:text-[#F9B872]"
-                aria-label="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Twitter className="h-5 w-5" />
               </a>
             </div>
             <div className="mt-4">
