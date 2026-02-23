@@ -27,10 +27,20 @@ export default function ContactPage() {
                 Contact Information
               </h2>
               <p className="text-gray-600 mb-8">
-                You can also reach us through the following channels or visit us
-                during our office hours.
+                Please fill out the corresponding form in our Linktree which can be accessed below. You can also contact us through our email.
               </p>
-
+              
+              <div className="mb-10">
+                  <a
+                    href="https://linktr.ee/YOUR_LINKTREE_HERE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-[#4A6741] text-white font-medium rounded-lg hover:bg-[#4A6741]/90 transition"
+                  >
+                    Visit Our Linktree
+                  </a>
+              </div>
+              
               <div className="space-y-6 mb-8">
                 <div className="flex items-start justify-center text-left">
                   <MapPin className="h-6 w-6 mr-3 text-[#4A6741] shrink-0 mt-0.5" />
