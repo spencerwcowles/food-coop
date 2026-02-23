@@ -133,7 +133,7 @@ export default function ContactPage() {
                 question:
                   "I'm interested in volunteering. How do I get started?",
                 answer:
-                  "Great! You can fill out our volunteer form on the Get Involved page, or come to one of our weekly meetings to meet current members and learn more about volunteer opportunities.",
+                  "Great! You can fill out our volunteer form on our linktree, which we have attached on the contact page and on our instagram! You could also come to one of our weekly meetings to meet current members and learn more about volunteer opportunities.",
               },
               {
                 question: "Do I need to be a UCSD student to contact you?",
