@@ -32,7 +32,7 @@ export default function ContactPage() {
               
               <div className="mb-10">
                   <a
-                    href="https://linktr.ee/YOUR_LINKTREE_HERE"
+                    href="https://linktr.ee/ucsdfoodcoop"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-6 py-3 bg-[#4A6741] text-white font-medium rounded-lg hover:bg-[#4A6741]/90 transition"
